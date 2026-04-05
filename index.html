@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Task Management App</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+
+        <div class="main-container">
+            <div class="to-do-container">
+                <!--HEADER CONTENT-->
+                <header class="content-header">
+                    <div class="content-header-text">
+                        <h1>Task Manager</h1>
+                        <p>Organize your day efficiently</p>
+                    </div>
+                    <div class="content-header-icon">
+                        <i class="fa-solid fa-clipboard-list"></i>
+                        <span id="task-count">1</span>
+                    </div>
+                </header>
+                <!--MAIN CONTENT-->
+                <main class="content-main">
+                    <div class="content-main-taskname">
+                        <input id="taskname-input" type="text" placeholder="What needs to be done?" autocomplete="off">
+                        <button id="add-button">+</button>
+                    </div>
+                    <div class="content-main-dropdowns">
+                        <select name="" id="task-category">
+                            <option value="general">General</option>
+                            <option value="work">Work</option>
+                            <option value="personal">Personal</option>
+                            <option value="shopping">Shopping</option>
+                            <option value="health">Health</option>
+                        </select>
+                        <select name="" id="task-priority">
+                            <option value="medium">Medium Priority</option>
+                            <option value="low">Low Priority</option>
+                            <option value="high">High Priority</option>
+                        </select>
+                    </div>
+                    <div class="content-main-filter">
+                        <div class="priority-buttons">
+                            <button data-filter="all" class="filter-buttons selected-filter">All Tasks</button>
+                            <button data-filter="active" class="filter-buttons">Active</button>
+                            <button data-filter="completed" class="filter-buttons">Completed</button>
+                        </div>
+                        <div class="sort-dropdown">
+                            <span>Sort By:</span>
+                            <select id="sort-selection">
+                                <option value="newest">Newest</option>
+                                <option value="oldest">Oldest</option>
+                                <option value="priority">Priority</option>
+                                <option value="category">Category</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="content-main-tasks">
+                        <!-- <i class="fa-solid fa-list-check"></i>
+                        <p>No tasks yet</p> -->
+                        <ul id="task-cards-list">
+                            <li style="display: flex; justify-content: center; align-items: center; gap: 10px; margin: 50px 0px;">
+                                <i class="fa-solid fa-list-check"></i>
+                                <p style="margin: 0px;">No tasks yet</p>
+                            </li>
+                        </ul>
+                    </div>
+                </main>
+                <footer class="content-footer">
+                    <div class="remaining-tasks">
+                        <p><span id="remaining-task">0 task left</span></p>
+                    </div>
+                    <div class="footer-buttons">
+                        <button id="clear-all-button"><i class="fa-solid fa-trash-can"></i> Clear All</button>
+                        <button id="clear-completed-button"><i class="fa-solid fa-trash-can"></i> Clear Completed</button>
+                    </div>
+                </footer>
+            </div>
+        </div>
+
+        <script src="main.js"></script>
+    </body>
+</html>
