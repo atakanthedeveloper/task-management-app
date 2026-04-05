@@ -1,7 +1,7 @@
 # Task Management App
 
 A responsive task management application built with **HTML**, **CSS**, and **Vanilla JavaScript**.  
-This project allows users to create, edit, complete, delete, filter, and sort tasks while keeping data persistent with **localStorage**..
+This project allows users to create, edit, complete, delete, filter, and sort tasks while keeping data persistent with **localStorage**.
 
 ## Overview
 
